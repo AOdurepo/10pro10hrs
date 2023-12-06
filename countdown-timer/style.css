@@ -6,6 +6,10 @@
 }
 
 body {
+    background-image: url("./istockphoto.jpg");
     font-family: "Oswald", sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;    
     margin: 0;
 }
