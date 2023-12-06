@@ -10,6 +10,26 @@ body {
     font-family: "Oswald", sans-serif;
     min-height: 100vh;
     background-size: cover;
-    background-position: center center;    
+    background-position: center center;
+    display: flex;   /*display: flex; what do the keys & values mean?*/
+    flex-direction: column;
     margin: 0;
+    align-items: center; /*Horizontal*/
+    justify-content: flex-start; /*Vertical*/
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    /*10 & -10rem give very different results to the heading.*/
+    margin: -1;
+    /*Border v Margin v Padding*/
+}
+.countdown-container {
+
+
+
+    display: flex;
+/*This display:flex made the contents of the container class align horizontally*/
+
 }
