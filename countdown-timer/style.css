@@ -25,11 +25,20 @@ h1 {
     margin: -1;
     /*Border v Margin v Padding*/
 }
+
 .countdown-container {
-
-
-
     display: flex;
 /*This display:flex made the contents of the container class align horizontally*/
-
 }
+
+.big-text {
+    font-size: 6rem; 
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.countdown-el {
+/*text-align along with the countdown-el class helped align eaach time distinction with its corresponding label (days, hours, mins, secs, etc)*/
+    text-align: center
+}
+
