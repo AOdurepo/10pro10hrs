@@ -14,7 +14,7 @@ body {
     display: flex;   /*display: flex; what do the keys & values mean?*/
     flex-direction: column;
     margin: 0;
-    align-items: center; /*Horizontal*/
+    align-items: center; /*Horizontal*/    
     justify-content: flex-start; /*Vertical*/
     margin: 0;
 }
@@ -22,9 +22,11 @@ body {
 h1 {
     font-size: 4rem;
     /*10 & -10rem give very different results to the heading.*/
-    margin: -1;
     /*Border v Margin v Padding*/
-}
+    margin-top: 0.5rem;
+    font-weight: normal;
+
+}   
 
 .countdown-container {
     display: flex;
@@ -32,6 +34,7 @@ h1 {
 }
 
 .big-text {
+    font-weight: bold;
     font-size: 6rem; 
     line-height: 1;
     margin: 0 2rem;
@@ -39,6 +42,12 @@ h1 {
 
 .countdown-el {
 /*text-align along with the countdown-el class helped align eaach time distinction with its corresponding label (days, hours, mins, secs, etc)*/
-    text-align: center
+    text-align: center;
 }
 
+.countdown-el span {
+
+    font-size: 2rem;
+
+
+}
