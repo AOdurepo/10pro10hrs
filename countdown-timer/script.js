@@ -6,5 +6,9 @@ function countdown() {
     console.log(eventDate - currentDate)
 } 
 
+setInterval(countdown, 1000)
 // we should call the function at the end of this script
 countdown();
+
+
+
