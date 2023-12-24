@@ -1,3 +1,8 @@
+const daysEl =  document.getElementById('days');
+const hoursEl = document.getElementById('hours');
+const minutesEl = document.getElementById('mins');
+const secondsEl =document.getElementById('seconds');
+
 const testDate = '30 January 2024';
 
 function countdown() {
@@ -11,7 +16,12 @@ function countdown() {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds % 60);
     //console.log(seconds);     
-    console.log(days, hours, minutes, seconds)
+    //console.log(days, hours, minutes, seconds)
+
+    daysEl.innerHTML = days;
+    hoursEl.innerHTML = hours;
+    minutesEl.innerHTML = minutes;
+    secondsEl.innerHTML = seconds;
 
 } 
 
