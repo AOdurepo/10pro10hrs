@@ -31,6 +31,9 @@ h1 {
 .countdown-container {
     display: flex;
 /*This display:flex made the contents of the container class align horizontally*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .big-text {
