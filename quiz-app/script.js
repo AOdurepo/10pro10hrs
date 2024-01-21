@@ -1,6 +1,7 @@
 const quizData = [
     {
         question: "What are 2 ways articles & questions are organized in the knowledge homepage?(all that apply)",
+        multi: true,
         a: 'Article Rating',
         b: 'Category',
         c: 'Knwoledge Base',
@@ -8,6 +9,7 @@ const quizData = [
         correct: 'b' && 'c'
         }, {
         question: 'What are the steps for applying an update set an instance?',
+        multi: true,
         a: 'Log',
         b: 'Commit',
         c: 'Debug',
@@ -17,6 +19,7 @@ const quizData = [
         correct: 'b' && 'e' && 'f'
         }, {
         question: 'What type of scripts are supported for UI Policies??',
+        multi: true,
         a: 'onCellEdit()',
         b: 'onChange()',
         c: 'onLoad()',
@@ -25,7 +28,8 @@ const quizData = [
         f: 'onExit()',
         correct: 'a' && 'b' && 'c' && 'd' && 'e'
         }, {
-        question: 'What is used to add buttons, links, & context menu itesms on forms & lists?',
+        question: 'What is used to add buttons, links, & context menu items on forms & lists?',
+        multi: false,
         a: 'UI Actions',
         b: 'Data Policies',
         c: 'UI Policies',
@@ -34,6 +38,7 @@ const quizData = [
         correct: 'a'
         }, {
         question: 'What is captured in an update set? (All that apply)',
+        multi: true,
         a: 'New Data Records',
         b: 'Tasks',
         c: 'Client Scripts',
@@ -45,3 +50,8 @@ const quizData = [
         correct: 'c' && 'd' && 'e' && 'g'
         }
 ]
+
+for (let i=0; i < quizData.length; i++) {
+    
+
+}
