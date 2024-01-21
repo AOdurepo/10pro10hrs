@@ -2,14 +2,18 @@ const quizData = [
     {
         question: "What are 2 ways articles & questions are organized in the knowledge homepage?(all that apply)",
         multi: true,
-        a: 'Article Rating',
-        b: 'Category',
-        c: 'Knwoledge Base',
-        d: 'Article Title',
-        correct: 'b' && 'c'
+        answerChoices: {
+            a: 'Article Rating',
+            b: 'Category',
+            c: 'Knwoledge Base',
+            d: 'Article Title',
+            correct: 'b' && 'c'
+        }
+       
         }, {
         question: 'What are the steps for applying an update set an instance?',
         multi: true,
+        answerChoices: {
         a: 'Log',
         b: 'Commit',
         c: 'Debug',
@@ -17,6 +21,7 @@ const quizData = [
         e: 'Retrieve',
         f: 'Preview',
         correct: 'b' && 'e' && 'f'
+        }
         }, {
         question: 'What type of scripts are supported for UI Policies??',
         multi: true,
@@ -51,7 +56,12 @@ const quizData = [
         }
 ]
 
-for (let i=0; i < quizData.length; i++) {
-    
 
-}
+function formatQuestionAnswers() {
+
+for (let i=0; i < quizData.length; i++) {
+
+    quizData[i]
+
+
+}}
