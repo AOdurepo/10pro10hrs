@@ -39,3 +39,28 @@ const quizData = [
         correct: 'd'
     }
 ]
+const questionEl = document.getElementById('question')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+
+
+let currentQuestion = 0;
+
+// loadQuizQuestion() - we want this function to call everytime we submit.
+
+loadQuizQuestion()
+
+function loadQuizQuestion() {
+    const currentQuizQuestion = quizData[currentQuestion];
+    questionEl.innerText = currentQuizQuestion.question;
+    a_text.innerText = currentQuizQuestion.a
+    b_text.innerText = currentQuizQuestion.b
+    c_text.innerText = currentQuizQuestion.c
+    d_text.innerText = currentQuizQuestion.d
+
+    // a_text.innerText = quizData[currentQuestion].a
+
+    currentQuestion++;
+}
