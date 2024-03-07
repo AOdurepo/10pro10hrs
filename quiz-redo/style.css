@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Rubik+Bubbles&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#E1E6E2;
+    background-image: linear-gradient(315deg, #E1E6E2, #8b9c90 100% );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+
+.quiz-container {
+
+    background-color: #ffff;
+    border-radius: 18px;
+    box-shadow: 0 0 10px 2px rgb(100, 100, 100, 0.1);
+    overflow: hidden;
+    width: 600px;
+    max-width: 100%; /*what does this attribute do*/
+
+}
+
+.quiz-header {
+    padding: 4rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+button { 
+    background-color: #8e44ad;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 2rem
+}
+
+button:hover {
+    background-color: #53196c;
+}

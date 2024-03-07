@@ -23,7 +23,7 @@ const quizData = [
         c: 'UI Actions',
         d: 'Data Policy',
         correct: 'b'
-    },  {
+    },  {   
         question: 'Which menu provides options related to viewing, configuring, creating favourites and saving form data?',
         a: 'Form Column Menu',
         b: 'Form Personalisation Menu',
