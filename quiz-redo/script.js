@@ -44,7 +44,7 @@ const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
-
+const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
 
@@ -60,7 +60,12 @@ function loadQuizQuestion() {
     c_text.innerText = currentQuizQuestion.c
     d_text.innerText = currentQuizQuestion.d
 
+
     // a_text.innerText = quizData[currentQuestion].a
 
     currentQuestion++;
 }
+
+submitBtn.addEventListener('click', () => {
+    loadQuizQuestion();
+})
