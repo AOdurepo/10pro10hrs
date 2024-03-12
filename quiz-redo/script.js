@@ -63,9 +63,16 @@ function loadQuizQuestion() {
 
     // a_text.innerText = quizData[currentQuestion].a
 
-    currentQuestion++;
+//    currentQuestion++;
 }
 
 submitBtn.addEventListener('click', () => {
+    currentQuestion++;
+    if(currentQuestion < quizData.length) {
+
     loadQuizQuestion();
+}   else {
+    alert('You completes this Quiz!')
+}
+
 })
