@@ -72,7 +72,9 @@ submitBtn.addEventListener('click', () => {
 
     loadQuizQuestion();
 }   else {
-    alert('You completes this Quiz!')
+    // ToDo: Show results 
+    alert('You completed this Quiz!')
+
 }
 
 })
