@@ -65,16 +65,35 @@ function loadQuizQuestion() {
 
 //    currentQuestion++;
 }
+``
+
+function getSelected() {
+ //   console.log('hi');
+    const answers = document.querySelectorAll('.answer');
+
+    answers.forEach((answer) => {
+
+        if(answer.checked){
+            
+        }
+    })
+
+
+}
 
 submitBtn.addEventListener('click', () => {
     currentQuestion++;
-    if(currentQuestion < quizData.length) {
+    getSelected();
 
-    loadQuizQuestion();
-}   else {
-    // ToDo: Show results 
-    alert('You completed this Quiz!')
+//     if(currentQuestion < quizData.length) {
 
-}
+//     loadQuizQuestion();
+// }   else {
+//     // ToDo: Show results 
+//     alert('You completed this Quiz!')
+
+
+// }
+
 
 })
