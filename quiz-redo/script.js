@@ -47,8 +47,11 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
+let answer = undefined;
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
+
+let score = 0;
 
 loadQuizQuestion()
 
@@ -65,35 +68,50 @@ function loadQuizQuestion() {
 
 //    currentQuestion++;
 }
-``
+
 
 function getSelected() {
  //   console.log('hi');
-    const answers = document.querySelectorAll('.answer');
+    const answerEls = document.querySelectorAll('.answer');
 
-    answers.forEach((answer) => {
+    answerEls.forEach((answerEl) => {
 
-        if(answer.checked){
+        if(answerEl.checked){
+
+            return answerEl.id;
+
             
         }
-    })
+    });
+ 
+
+    return undefined;
 
 
 }
 
 submitBtn.addEventListener('click', () => {
     currentQuestion++;
-    getSelected();
+    
+    const answer = getSelected();
 
-//     if(currentQuestion < quizData.length) {
+    if(answer) {
 
-//     loadQuizQuestion();
-// }   else {
-//     // ToDo: Show results 
-//     alert('You completed this Quiz!')
+            if(answer === getSelected)
+
+            if(currentQuestion < quizData.length) {
+
+    loadQuizQuestion();
+}   else {
+    // ToDo: Show results 
+    alert('You completed this Quiz!')
 
 
-// }
+ }
+
+    }
+
+
 
 
 })
