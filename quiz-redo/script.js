@@ -47,11 +47,8 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
-let answer = undefined;
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
-
-let score = 0;
 
 loadQuizQuestion()
 
@@ -68,50 +65,37 @@ function loadQuizQuestion() {
 
 //    currentQuestion++;
 }
-
+  
 
 function getSelected() {
  //   console.log('hi');
-    const answerEls = document.querySelectorAll('.answer');
+    const answers = document.querySelectorAll('.answer');
+// How would this work vs getElementsByClassName()  ???
 
-    answerEls.forEach((answerEl) => {
-
-        if(answerEl.checked){
-
-            return answerEl.id;
-
+// learn more about he forEach() method
+    answers.forEach((answer) => {
+        console.log(answer.checked)
+       // if(answer.checked){
             
-        }
-    });
- 
-
-    return undefined;
+       // }
+    })
 
 
 }
 
 submitBtn.addEventListener('click', () => {
     currentQuestion++;
-    
-    const answer = getSelected();
+    getSelected();
 
-    if(answer) {
+//     if(currentQuestion < quizData.length) {
 
-            if(answer === getSelected)
-
-            if(currentQuestion < quizData.length) {
-
-    loadQuizQuestion();
-}   else {
-    // ToDo: Show results 
-    alert('You completed this Quiz!')
+//     loadQuizQuestion();
+// }   else {
+//     // ToDo: Show results 
+//     alert('You completed this Quiz!')
 
 
- }
-
-    }
-
-
+// }
 
 
 })
