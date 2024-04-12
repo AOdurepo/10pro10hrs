@@ -47,7 +47,7 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
-let answer = undefined; 
+let score = 0; 
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
 
@@ -79,32 +79,39 @@ function getSelected() {
 // learn more about he forEach() method
      answerEls.forEach((answerEl) => {
         if(answerEl.checked){
-            answer = answerEl.id
+            return answerEl.id;
 
         }
        // if(answer.checked){
             
-       // }
-    })
+       // 
+     
 
+    });
+
+     return undefined; 
 
 }
 
 submitBtn.addEventListener('click', () => {
-    currentQuestion++;
-    getSelected();
-    loadQuizQuestion();
+    // check to see the answer
+    const answer = getSelected();
 
+    if(answer && answer === quizData[currentQuestion].answer) {   
+       
+        currentQuestion++;   
+    }
+    
+    
 
-//     if(currentQuestion < quizData.length) {
+            if(currentQuestion < quizData.length) {
 
-//     loadQuizQuestion();
-// }   else {
-//     // ToDo: Show results 
-//     alert('You completed this Quiz!')
-
-
-// }
-
-
+                    loadQuizQuestion() }   
+            
+            else {
+                     // ToDo: Show results 
+                   alert('You completed this Quiz!')
+                }
+    // getSelected();
+    // loadQuizQuestion();
 })
