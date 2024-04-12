@@ -92,7 +92,9 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     currentQuestion++;
+    getSelected();
     loadQuizQuestion();
+
 
 //     if(currentQuestion < quizData.length) {
 
