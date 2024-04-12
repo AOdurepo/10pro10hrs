@@ -47,14 +47,18 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
+let answer = undefined; 
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
 
 loadQuizQuestion()
 
+// getElementById is used to target elements
+// innerText (attribute) is used to insert data into the element(s)
+
 function loadQuizQuestion() {
-    const currentQuizQuestion = quizData[currentQuestion];
-    questionEl.innerText = currentQuizQuestion.question;
+    const currentQuizQuestion = quizData[currentQuestion]
+    questionEl.innerText = currentQuizQuestion.question
     a_text.innerText = currentQuizQuestion.a
     b_text.innerText = currentQuizQuestion.b
     c_text.innerText = currentQuizQuestion.c
@@ -69,12 +73,15 @@ function loadQuizQuestion() {
 
 function getSelected() {
  //   console.log('hi');
-    const answers = document.querySelectorAll('.answer');
+    const answerEls = document.querySelectorAll('.answer');
 // How would this work vs getElementsByClassName()  ???
 
 // learn more about he forEach() method
-    answers.forEach((answer) => {
-        console.log(answer.checked)
+     answerEls.forEach((answerEl) => {
+        if(answerEl.checked){
+            answer = answerEl.id
+
+        }
        // if(answer.checked){
             
        // }
@@ -85,7 +92,7 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     currentQuestion++;
-    getSelected();
+    loadQuizQuestion();
 
 //     if(currentQuestion < quizData.length) {
 
