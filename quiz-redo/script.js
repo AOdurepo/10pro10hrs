@@ -76,20 +76,18 @@ function getSelected() {
     const answerEls = document.querySelectorAll('.answer');
 // How would this work vs getElementsByClassName()  ???
 
+    let answer = undefined;
+
 // learn more about he forEach() method
      answerEls.forEach((answerEl) => {
         if(answerEl.checked){
-            return answerEl.id;
-
+            answer = answerEl.id;
         }
        // if(answer.checked){
-            
-       // 
-     
-
+       //     
     });
 
-     return undefined; 
+     return answer; 
 
 }
 
@@ -97,21 +95,26 @@ submitBtn.addEventListener('click', () => {
     // check to see the answer
     const answer = getSelected();
 
-    if(answer && answer === quizData[currentQuestion].answer) {   
+    console.log(answer)
+
+    if(answer) {  
+        
+        if(answer === quizData[currentQuestion].correct) {
+            score++;
+        }
+
+        if(currentQuestion < quizData.length) {
+
+            loadQuizQuestion() }   
+    
+    else {
+             // ToDo: Show results 
+           alert('You completed this Quiz!')
+        }
        
         currentQuestion++;   
     }
-    
-    
 
-            if(currentQuestion < quizData.length) {
-
-                    loadQuizQuestion() }   
-            
-            else {
-                     // ToDo: Show results 
-                   alert('You completed this Quiz!')
-                }
     // getSelected();
     // loadQuizQuestion();
-})
+});
