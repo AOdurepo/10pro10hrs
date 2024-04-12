@@ -39,6 +39,9 @@ const quizData = [
         correct: 'd'
     }
 ]
+
+const answerEls = document.querySelectorAll('.answer');
+
 const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
@@ -73,7 +76,6 @@ function loadQuizQuestion() {
 
 function getSelected() {
  //   console.log('hi');
-    const answerEls = document.querySelectorAll('.answer');
 // How would this work vs getElementsByClassName()  ???
 
     let answer = undefined;
@@ -91,6 +93,11 @@ function getSelected() {
 
 }
 
+function deselectAnswers() {
+    answerEls.forEach((answerEl) => {
+       answerEl.checked = false;
+});
+}
 submitBtn.addEventListener('click', () => {
     // check to see the answer
     const answer = getSelected();
@@ -114,6 +121,7 @@ submitBtn.addEventListener('click', () => {
        
         currentQuestion++;   
     }
+    deselectAnswers();
 
     // getSelected();
     // loadQuizQuestion();
