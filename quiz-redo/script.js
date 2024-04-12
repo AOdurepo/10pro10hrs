@@ -60,6 +60,8 @@ loadQuizQuestion()
 // innerText (attribute) is used to insert data into the element(s)
 
 function loadQuizQuestion() {
+
+    deselectAnswers();
     const currentQuizQuestion = quizData[currentQuestion]
     questionEl.innerText = currentQuizQuestion.question
     a_text.innerText = currentQuizQuestion.a
@@ -114,14 +116,13 @@ submitBtn.addEventListener('click', () => {
 
             loadQuizQuestion() }   
     
-    else {
+        else {
              // ToDo: Show results 
            alert('You completed this Quiz!')
         }
        
         currentQuestion++;   
     }
-    deselectAnswers();
 
     // getSelected();
     // loadQuizQuestion();
