@@ -51,6 +51,7 @@ const submitBtn = document.getElementById('submit')
 
 let currentQuestion = 0;
 let score = 0; 
+const currentQuizQuestion = quizData[currentQuestion]
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
 
@@ -59,10 +60,10 @@ loadQuizQuestion()
 // getElementById is used to target elements
 // innerText (attribute) is used to insert data into the element(s)
 
+
 function loadQuizQuestion() {
 
     deselectAnswers();
-    const currentQuizQuestion = quizData[currentQuestion]
     questionEl.innerText = currentQuizQuestion.question
     a_text.innerText = currentQuizQuestion.a
     b_text.innerText = currentQuizQuestion.b
@@ -108,7 +109,7 @@ submitBtn.addEventListener('click', () => {
 
     if(answer) {  
         
-        if(answer === quizData[currentQuestion].correct) {
+        if(answer === currentQuizQuestion.correct) {
             score++;
         }
 
