@@ -39,7 +39,7 @@ const quizData = [
         correct: 'd'
     }
 ]
-
+const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
 
 const questionEl = document.getElementById('question')
@@ -119,7 +119,7 @@ submitBtn.addEventListener('click', () => {
     
         else {
              // ToDo: Show results 
-           alert('You completed this Quiz!')
+           quiz.innerHTML = `You answered ${score}/${quizData.length} questions correctly!`
         }
        
         currentQuestion++;   
