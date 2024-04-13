@@ -55,14 +55,13 @@ const currentQuizQuestion = quizData[currentQuestion]
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
 
-loadQuizQuestion()
+loadQuizQuestion() // removing this will cause the program to load its initial html text instead of an actual question.
 
 // getElementById is used to target elements
 // innerText (attribute) is used to insert data into the element(s)
 
 
 function loadQuizQuestion() {
-
     deselectAnswers();
     questionEl.innerText = currentQuizQuestion.question
     a_text.innerText = currentQuizQuestion.a
@@ -111,6 +110,8 @@ submitBtn.addEventListener('click', () => {
         
         if(answer === currentQuizQuestion.correct) {
             score++;
+
+            console.log(score)
         }
 
         if(currentQuestion < quizData.length) {
@@ -119,10 +120,10 @@ submitBtn.addEventListener('click', () => {
     
         else {
              // ToDo: Show results 
-           quiz.innerHTML = `You answered ${score}/${quizData.length} questions correctly!`
+           quiz.innerHTML = `<h2>You answered ${score}/${quizData.length + 1 } questions correctly!</h2>`
         }
        
-        currentQuestion++;   
+         currentQuestion++;   
     }
 
     // getSelected();
