@@ -42,16 +42,15 @@ const quizData = [
 const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
 
-const questionEl = document.getElementById('question')
-const a_text = document.getElementById('a_text')
-const b_text = document.getElementById('b_text')
-const c_text = document.getElementById('c_text')
-const d_text = document.getElementById('d_text')
-const submitBtn = document.getElementById('submit')
+const questionEl = document.getElementById('question');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const submitBtn = document.getElementById('submit');
 
-let currentQuestion = 0;
+let currentQuestionNumber = 0;
 let score = 0; 
-const currentQuizQuestion = quizData[currentQuestion]
 
 // loadQuizQuestion() - we want this function to call everytime we submit.
 
@@ -62,12 +61,15 @@ loadQuizQuestion() // removing this will cause the program to load its initial h
 
 
 function loadQuizQuestion() {
+
     deselectAnswers();
-    questionEl.innerText = currentQuizQuestion.question
-    a_text.innerText = currentQuizQuestion.a
-    b_text.innerText = currentQuizQuestion.b
-    c_text.innerText = currentQuizQuestion.c
-    d_text.innerText = currentQuizQuestion.d
+    const currentQuizQuestion = quizData[currentQuestionNumber];
+
+    questionEl.innerText = currentQuizQuestion.question;
+    a_text.innerText = currentQuizQuestion.a;
+    b_text.innerText = currentQuizQuestion.b;
+    c_text.innerText = currentQuizQuestion.c;
+    d_text.innerText = currentQuizQuestion.d;
 
 
     // a_text.innerText = quizData[currentQuestion].a
@@ -108,22 +110,25 @@ submitBtn.addEventListener('click', () => {
 
     if(answer) {  
         
-        if(answer === currentQuizQuestion.correct) {
+        if(answer ===  quizData[currentQuestionNumber].correct) {
+            //
+
             score++;
 
-            console.log(score)
+           // console.log(score)
         }
 
-        if(currentQuestion < quizData.length) {
+        if(currentQuestionNumber < quizData.length) {
 
-            loadQuizQuestion() }   
+            loadQuizQuestion(); }   
     
         else {
              // ToDo: Show results 
            quiz.innerHTML = `<h2>You answered ${score}/${quizData.length + 1 } questions correctly!</h2>`
         }
        
-         currentQuestion++;   
+        console.log(currentQuestionNumber)
+         currentQuestionNumber++;   
     }
 
     // getSelected();
