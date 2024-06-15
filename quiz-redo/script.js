@@ -118,6 +118,8 @@ submitBtn.addEventListener('click', () => {
            // console.log(score)
         }
 
+        currentQuestionNumber++;
+
         if(currentQuestionNumber < quizData.length) {
 
             loadQuizQuestion(); }   
@@ -128,7 +130,7 @@ submitBtn.addEventListener('click', () => {
         }
        
         console.log(currentQuestionNumber)
-         currentQuestionNumber++;   
+        //  currentQuestionNumber++;   
     }
 
     // getSelected();
