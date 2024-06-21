@@ -41,7 +41,6 @@ const quizData = [
 ]
 const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
-
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -126,7 +125,7 @@ submitBtn.addEventListener('click', () => {
     
         else {
              // ToDo: Show results 
-           quiz.innerHTML = `<h2>You answered ${score}/${quizData.length } questions correctly!</h2>`
+           quiz.innerHTML = `<h2>You answered ${score}/${quizData.length} questions correctly!</h2> <button onClick="location.reload()">Reload</button>`
         }
        
         console.log(currentQuestionNumber)
