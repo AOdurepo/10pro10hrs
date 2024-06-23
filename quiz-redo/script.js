@@ -125,7 +125,8 @@ submitBtn.addEventListener('click', () => {
     
         else {
              // ToDo: Show results 
-           quiz.innerHTML = `<h2>You answered ${score}/${quizData.length} questions correctly!</h2> <button onClick="location.reload()">Reload</button>`
+           quiz.innerHTML = `<h2>You answered ${score}/${quizData.length} 
+           questions correctly!</h2> <button onClick="location.reload()">Reload</button>`
         }
        
         console.log(currentQuestionNumber)
