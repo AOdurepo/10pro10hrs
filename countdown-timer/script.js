@@ -3,7 +3,7 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
-const testDate = '30 January 2024';
+const testDate = '20 January 2025';
 
 function countdown() {
     const eventDate = new Date(testDate/*csaExam*/);
